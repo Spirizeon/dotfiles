@@ -11,8 +11,8 @@
 - **Editors:** [neovide](https://github.com/neovide/neovide)
 - **Terminals:** [X-term](https://invisible-island.net/xterm/), [Kitty](https://github.com/kovidgoyal/kitty)
 - **Bar:** Wibar (default)
-- **Compositor:** NOT SET
-- **Notifications:** NOT SET
+- **Compositor:** NOT SET (TO BE PICOM)
+- **Notifications:** NOT SET (TO BE DUNST)
 - **Shells:** Bash
 - **Prompt:** [Starship](https://starship.rs/)
 

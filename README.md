@@ -17,7 +17,7 @@
 - **Prompt:** Starship 
 
 ### Duplicate config.🌑
-Copy paste [this](...) script into your terminal to copy down my configuration
+Copy paste [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh) script into your terminal to copy down my configuration
 
 ![](https://i.imgur.com/eMx0s2z.png)
 # Thanks!

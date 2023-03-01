@@ -16,12 +16,12 @@
 - **Shells:** Bash
 - **Prompt:** [Starship](https://starship.rs/)
 
-## Neovim config. 
+## Neovim configuration 🧼
 - **Packages:** Lazy-nvim, Telescope-nvim, Plenary-nvim
 - **Lsp's:** Python, CSS, HTML, SQL, Vimscript, Lua
 - **Formatters:** Python, LaTeX, Markdown
 
-### Installation💮
+## Installation 💮
 Run the following script in your terminal
 ```bash
 sudo apt install git
@@ -32,7 +32,7 @@ install.sh
 #
 ![](https://i.imgur.com/eMx0s2z.png)
 #
-## Acknowledgements
+## Acknowledgements 🎴
 - https://www.makeuseof.com/
 - https://itsfoss.com/
 - https://www.youtube.com/@DistroTube
@@ -42,5 +42,5 @@ install.sh
 - https://reddit.com/r/unixporn
 
 
-# Thanks!
+# Thanks! 💐
 Please ⭐ this repository if you liked it. it'd mean a lot to me.

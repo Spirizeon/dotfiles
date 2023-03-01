@@ -1,6 +1,9 @@
 
-# ZyreeAwesome
-## Linux configuration for my workflow
+# ZyreeAwesome 💖
+
+![](https://i.imgur.com/qLW4KZV.png)
+
+## Linux configuration for my workflow 🌸
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
 - **Window manager:** [AwesomeWM](https://awesomewm.org/)
@@ -13,7 +16,7 @@
 - **Shells:** Bash
 - **Prompt:** Starship 
 
-### Duplicate config.
+### Duplicate config.🌑
 Copy paste this script into your terminal to copy down my configuration (Do note that this may only work for Debian) 
 ```bash
 # Note that if the script doesn't work, click 
@@ -54,9 +57,9 @@ git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 
-# fancy part
-echo "Please star [https://github.com/zyree] on their repository if you liked it"
+
 ```
-## Screenshots
+
 ![](https://i.imgur.com/eMx0s2z.png)
-![](https://i.imgur.com/qLW4KZV.png)
+# Thanks!
+Please ⭐ this repository if you liked it. it'd mean a lot to me.

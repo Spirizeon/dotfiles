@@ -16,6 +16,11 @@
 - **Shells:** Bash
 - **Prompt:** Starship 
 
+## Neovim config. 
+- **Packages:** Lazy-nvim, Telescope-nvim, Plenary-nvim
+- **Lsp's:** Python, CSS, HTML, SQL, Vimscript, Lua
+- **Formatters:** Python, LaTeX, Markdown
+
 ### Installation💮
 Run the following script in your terminal
 ```bash

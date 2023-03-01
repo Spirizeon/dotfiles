@@ -1,8 +1,6 @@
 
 # ZyreeAwesome 💖
-
-![](https://i.imgur.com/qLW4KZV.png)
-
+[ SS HERE (nvim and terminal) ] 
 ## Linux configuration for my workflow 🌸
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
@@ -30,7 +28,7 @@ chmod +x install.sh
 install.sh
 ```
 #
-![](https://i.imgur.com/eMx0s2z.png)
+[ SS HERE (spotify + cava) ]
 #
 ## Acknowledgements 🎴
 - https://www.makeuseof.com/

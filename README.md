@@ -16,8 +16,14 @@
 - **Shells:** Bash
 - **Prompt:** Starship 
 
-### Duplicate config.🌑
-Copy paste [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh) script into your terminal to copy down my configuration
+### Duplicating Configuration💮
+Navigate to [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh) file
+run this script after installing the file 
+
+```bash
+chmod +x install.sh
+install.sh
+```
 #
 ![](https://i.imgur.com/eMx0s2z.png)
 #

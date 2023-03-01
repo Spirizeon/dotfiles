@@ -14,7 +14,7 @@
 - **Compositor:** NOT SET
 - **Notifications:** NOT SET
 - **Shells:** Bash
-- **Prompt:** Starship 
+- **Prompt:** [Starship](https://starship.rs/)
 
 ## Neovim config. 
 - **Packages:** Lazy-nvim, Telescope-nvim, Plenary-nvim

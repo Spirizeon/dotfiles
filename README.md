@@ -18,7 +18,9 @@
 
 ### Duplicate config.🌑
 Copy paste [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh) script into your terminal to copy down my configuration
-
+#
+![](https://i.imgur.com/eMx0s2z.png)
+#
 ## Acknowledgements
 - https://www.makeuseof.com/
 - https://itsfoss.com/
@@ -27,7 +29,7 @@ Copy paste [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh
 - https://wiki.archlinux.org
 - https://reddit.com/r/awesomewm
 - https://reddit.com/r/unixporn
-- Documentations of all applications mentioned
-![](https://i.imgur.com/eMx0s2z.png)
+
+
 # Thanks!
 Please ⭐ this repository if you liked it. it'd mean a lot to me.

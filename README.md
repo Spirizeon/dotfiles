@@ -16,11 +16,11 @@
 - **Shells:** Bash
 - **Prompt:** Starship 
 
-### Duplicating Configuration💮
-Navigate to [this](https://github.com/Spirizeon/ZyreeAwesome/blob/main/install.sh) file
-run this script after installing the file 
-
+### Installation💮
+Run the following script in your terminal
 ```bash
+sudo apt install git
+git clone https://github.com/spirizeon/zyreeawesome
 chmod +x install.sh
 install.sh
 ```

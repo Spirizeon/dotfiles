@@ -36,3 +36,8 @@ git clone https://gitlab.com/dwt1/shell-color-scripts.git
 cd shell-color-scripts
 sudo make install
 
+#Replacing config files
+mkdir ~/.config/nvim
+cp ~/ZyreeAwesome/init.lua ~/.config/nvim/
+cp ~/ZyreeAwesome/rc.lua ~/.config/awesome/
+

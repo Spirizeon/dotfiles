@@ -18,12 +18,14 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 - **Packages:** Lazy-nvim, Telescope-nvim, Plenary-nvim
 - **Lsp's:** Python, CSS, HTML, SQL, Vimscript, Lua
 - **Formatters:** Python, LaTeX, Markdown
+-**Cheatsheet:** [Click](https://devhints.io/vim) here
 
 ## Installation 💮
 Run the following script in your terminal
 ```bash
 sudo apt install git
 git clone https://github.com/spirizeon/zyreeawesome
+cd zyreeawesome
 chmod +x install.sh
 install.sh
 ```
@@ -41,3 +43,5 @@ Also, as for picom, only the dependencies will be installed. As for building, pl
 
 # Thanks! 💐
 Please ⭐ this repository if you liked it. it'd mean a lot to me.
+Do check out the `showcase.sh`script before leaving
+

@@ -18,7 +18,7 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 - **Packages:** Lazy-nvim, Telescope-nvim, Plenary-nvim
 - **Lsp's:** Python, CSS, HTML, SQL, Vimscript, Lua
 - **Formatters:** Python, LaTeX, Markdown
--**Cheatsheet:** [Click](https://devhints.io/vim) here
+- **Cheatsheet:** [Click](https://devhints.io/vim) here
 
 ## Installation 💮
 Run the following script in your terminal

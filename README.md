@@ -1,6 +1,6 @@
 
 # ZyreeAwesome 💖
-[ SS HERE (nvim and terminal) ] 
+A beautiful linux desktop for coding/chilling, with ornamental transparency, seamless borders and rounded corners
 ## Linux configuration for my workflow 🌸
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
@@ -26,9 +26,6 @@ git clone https://github.com/spirizeon/zyreeawesome
 chmod +x install.sh
 install.sh
 ```
-#
-[ SS HERE (spotify + cava) ]
-#
 ## Acknowledgements 🎴
 - https://www.makeuseof.com/
 - https://itsfoss.com/

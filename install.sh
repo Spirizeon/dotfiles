@@ -48,3 +48,6 @@ mkdir ~/.config/nvim
 cp ~/ZyreeAwesome/init.lua ~/.config/nvim/
 cp ~/ZyreeAwesome/rc.lua ~/.config/awesome/
 cd $HOME
+sudo snap install lolcat
+cd $HOME
+echo "ALL DONE!"

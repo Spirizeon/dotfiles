@@ -27,6 +27,8 @@ git clone https://github.com/spirizeon/zyreeawesome
 chmod +x install.sh
 install.sh
 ```
+Do note that the script will only install the packages/applications 
+Also, as for picom, only the dependencies will be installed. As for building, please check the [Picom's](https://github.com/yshui/picom) repo.
 ## Acknowledgements 🎴
 - https://www.makeuseof.com/
 - https://itsfoss.com/

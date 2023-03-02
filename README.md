@@ -1,7 +1,8 @@
 
 # ZyreeAwesome 💖
-A beautiful linux desktop for coding/chilling, with ornamental transparency, seamless borders and rounded corners
-## Linux configuration for my workflow 🌸
+A beautiful linux desktop for coding/chilling, with ornamental transparency, seamless borders and rounded corners.
+
+## Specifications 🌸
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
 - **Tiling WM:** [AwesomeWM](https://awesomewm.org/)

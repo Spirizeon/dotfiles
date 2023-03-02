@@ -4,7 +4,8 @@
 ## Linux configuration for my workflow 🌸
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
-- **Window manager:** [AwesomeWM](https://awesomewm.org/)
+- **Tiling WM:** [AwesomeWM](https://awesomewm.org/)
+- **DE:** Gnome
 - **Sound control:** [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 - **Editors:** [neovide](https://github.com/neovide/neovide)
 - **Terminals:** [X-term](https://invisible-island.net/xterm/), [Kitty](https://github.com/kovidgoyal/kitty)

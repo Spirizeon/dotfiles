@@ -9,9 +9,7 @@
 - **Editors:** [neovide](https://github.com/neovide/neovide)
 - **Terminals:** [X-term](https://invisible-island.net/xterm/), [Kitty](https://github.com/kovidgoyal/kitty)
 - **Bar:** Wibar (default)
-- **Compositor:** NOT SET (TO BE PICOM)
-- **Notifications:** NOT SET (TO BE DUNST)
-- **Shells:** Bash
+- **Compositor:** [Picom](https://github.com/yshui/picom)
 - **Prompt:** [Starship](https://starship.rs/)
 
 ## Neovim configuration 🧼

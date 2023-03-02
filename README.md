@@ -5,7 +5,7 @@
 - **Distro:** [Debian 11 (Bullseye)](https://wiki.debian.org/DebianBullseye)
 - **Wallpapers:** [Click here](https://github.com/spirizeon/backdrop)
 - **Tiling WM:** [AwesomeWM](https://awesomewm.org/)
-- **DE:** Gnome
+- **DE:** [Gnome](https://www.gnome.org/)
 - **Sound control:** [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
 - **Editors:** [neovide](https://github.com/neovide/neovide)
 - **Terminals:** [X-term](https://invisible-island.net/xterm/), [Kitty](https://github.com/kovidgoyal/kitty)

@@ -28,14 +28,16 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 - Indent-blankline-nvim
 - Dashboard-nvim 
 - Treesitter-nvim 
+
 #### Future Packages 🗳️
 - org-mode
 - spotify-nvim 
 - startup-nvim 
+- NERDTree
 ### LSPs🉑
 - **Backend**: Python,SQL 
 - **Frontend:** CSS, HTML,
-- **Configuration**: Vimscript,Lua
+- **Configuration**: Vimscript,Lua, Docker
 - **Formatters:** Python, LaTeX, Markdown
 ### **Cheatsheet:** [Click here](https://devhints.io/vim) 
 

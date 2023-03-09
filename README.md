@@ -19,7 +19,7 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 ## ZyreeNeovim🤘
 
 ### Packages📦
-- Lazy-nvim
+- Lazy-nvim 
 - Telescope-nvim
 - Plenary-nvim
 - Mason-nvim

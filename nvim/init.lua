@@ -1,9 +1,14 @@
+-- ┏━┓╋┏┳━━━┳━━━┳┓╋╋┏┳━━┳━┓┏━┓╋╋┏━━━┳━┓╋┏┳━━━┳━━━┳━━━┳━━━┳┓┏━┓
+-- ┃┃┗┓┃┃┏━━┫┏━┓┃┗┓┏┛┣┫┣┫┃┗┛┃┃╋╋┃┏━┓┃┃┗┓┃┃┏━━┻┓┏┓┃┏━┓┃┏━┓┃┃┃┏┛
+-- ┃┏┓┗┛┃┗━━┫┃╋┃┣┓┃┃┏┛┃┃┃┏┓┏┓┃╋╋┃┃╋┃┃┏┓┗┛┃┗━━┓┃┃┃┃┃╋┃┃┗━┛┃┗┛┛
+-- ┃┃┗┓┃┃┏━━┫┃╋┃┃┃┗┛┃╋┃┃┃┃┃┃┃┣━━┫┃╋┃┃┃┗┓┃┃┏━━┛┃┃┃┃┗━┛┃┏┓┏┫┏┓┃
+-- ┃┃╋┃┃┃┗━━┫┗━┛┃┗┓┏┛┏┫┣┫┃┃┃┃┣━━┫┗━┛┃┃╋┃┃┃┗━━┳┛┗┛┃┏━┓┃┃┃┗┫┃┃┗┓
+-- ┗┛╋┗━┻━━━┻━━━┛╋┗┛╋┗━━┻┛┗┛┗┛╋╋┗━━━┻┛╋┗━┻━━━┻━━━┻┛╋┗┻┛┗━┻┛┗━┛
+
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
--- Install package manager
---    https://github.com/folke/lazy.nvim
---    `:help lazy.nvim.txt` for more info
+
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system {
@@ -15,25 +20,17 @@ if not vim.loop.fs_stat(lazypath) then
     lazypath,
   }
 end
+
+
 vim.opt.rtp:prepend(lazypath)
 
--- NOTE: Here is where you install your plugins.
---  You can configure plugins using the `config` key.
---
---  You can also configure plugins after the setup call,
---    as they will be available in your neovim runtime.
 require('lazy').setup({
-  -- NOTE: First, some plugins that don't require any configuration
+ 
 
-  -- Git related plugins
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
-
-  -- Detect tabstop and shiftwidth automatically
   'tpope/vim-sleuth',
 
-  -- NOTE: This is where your plugins related to LSP can be installed.
-  --  The configuration is done below. Search for lspconfig to find it below.
   { -- LSP Configuration & Plugins
     'neovim/nvim-lspconfig',
     dependencies = {
@@ -84,10 +81,10 @@ require('lazy').setup({
     -- See `:help lualine.txt`
     opts = {
       options = {
-        icons_enabled = false,
+        icons_enabled = true,
         theme = 'onedark',
-        component_separators = '|',
-        section_separators = '',
+        component_separator = { left = '', right = ''},
+        section_separator = { left = '', right = ''},
       },
     },
   },
@@ -101,23 +98,24 @@ require('lazy').setup({
       show_trailing_blankline_indent = false,
     },
   },
-
+ 
+  
   -- "gc" to comment visual regions/lines
+  { 'dstein64/vim-startuptime' },
   { 'numToStr/Comment.nvim', opts = {} },
-
+  { 'nvim-telescope/telescope-media-files.nvim'},
+  { 'ryanoasis/vim-devicons' },
+  { 'andweeb/presence.nvim'},
+  { 'mhinz/vim-signify' },
+  { 'tpope/vim-fugitive' },
+  { 'tpope/vim-rhubarb' },
+  { 'nvim-tree/nvim-tree.lua' },
+  { 'akinsho/bufferline.nvim' },
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
   
-  {
-   'glepnir/dashboard-nvim',
-    event = 'VimEnter',
-    config = function()
-     require('dashboard').setup {
-      -- config
-     }
-   end,
-   dependencies = { {'nvim-tree/nvim-web-devicons'}}
-  },
+  { 'startup-nvim/startup.nvim'  },
+ 
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.
@@ -461,6 +459,41 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
-
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+--
+--
+-- NVIM FILE TREE CONFIG
+-- disable netrw at the very start of your init.lua (strongly advised)
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
+-- set termguicolors to enable highlight groups
+vim.opt.termguicolors = true
+
+-- empty setup using defaults
+require("nvim-tree").setup()
+
+-- OR setup with some options
+require("nvim-tree").setup({
+  sort_by = "case_sensitive",
+  renderer = {
+    group_empty = true,
+  },
+  filters = {
+    dotfiles = true,
+  },
+})
+
+-- startup dashboard setup 
+require"startup".create_mappings({
+  ["<leader>ff"]="<cmd>Telescope find_files<CR>",
+  ["<leader>lg"]="<cmd>Telescope live_grep<CR>"
+})
+
+require("startup").setup({theme = "dashboard"}) -- put theme name here
+
+
+-- bufferline config 
+vim.opt.termguicolors = true
+require("bufferline").setup{}

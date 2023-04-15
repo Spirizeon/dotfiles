@@ -15,32 +15,6 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 - **Compositor:** [Picom](https://github.com/yshui/picom)
 - **Prompt:** [Starship](https://starship.rs/)
 
-
-## ZyreeNeovim🤘
-
-### Packages📦
-- Lazy-nvim 
-- Telescope-nvim
-- Plenary-nvim
-- Mason-nvim
-- Lualine 
-- Luasnip
-- Indent-blankline-nvim
-- Dashboard-nvim 
-- Treesitter-nvim 
-
-#### Future Packages 🗳️
-- org-mode
-- spotify-nvim 
-- startup-nvim 
-- NERDTree
-### LSPs🉑
-- **Backend**: Python,SQL 
-- **Frontend:** CSS, HTML,
-- **Configuration**: Vimscript,Lua, Docker
-- **Formatters:** Python, LaTeX, Markdown
-### **Cheatsheet:** [Click here](https://devhints.io/vim) 
-
 ## Installation 💮
 Run the following script in your terminal
 ```bash

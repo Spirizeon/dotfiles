@@ -1,5 +1,5 @@
 
-# ZyreeAwesome 💖
+# Debian-AwesomeWM 💖
 A beautiful linux desktop for coding/chilling, with ornamental transparency, seamless borders and rounded corners.
 </br>
 ### [Screenshots!](https://imgur.com/a/bAXE4eJ)

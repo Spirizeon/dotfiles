@@ -25,7 +25,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup({
- 
+
 
   'tpope/vim-fugitive',
   'tpope/vim-rhubarb',
@@ -98,8 +98,8 @@ require('lazy').setup({
       show_trailing_blankline_indent = false,
     },
   },
- 
-  
+
+
   -- "gc" to comment visual regions/lines
   { 'dstein64/vim-startuptime' },
   { 'numToStr/Comment.nvim', opts = {} },
@@ -113,9 +113,9 @@ require('lazy').setup({
   { 'akinsho/bufferline.nvim' },
   -- Fuzzy Finder (files, lsp, etc)
   { 'nvim-telescope/telescope.nvim', version = '*', dependencies = { 'nvim-lua/plenary.nvim' } },
-  
+
   { 'startup-nvim/startup.nvim'  },
- 
+
   -- Fuzzy Finder Algorithm which requires local dependencies to be built.
   -- Only load if `make` is available. Make sure you have the system
   -- requirements installed.

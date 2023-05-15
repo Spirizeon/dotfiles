@@ -1,0 +1,19 @@
+[[language]]
+name = "python"
+language-server={ command="pylsp" }
+
+[[language]]
+name = "markdown"
+language-server={ command="marksman" }
+
+[[language]]
+name ="css"
+language-server={ command="vscode-css-language-server", args = ["--stdio"] }
+
+[[language]]
+name = "html"
+language-server={ command="vscode-html-language-server", args = ["--stdio"] }
+
+[[language]]
+name = "latex"
+language-server={ command="texlab" }

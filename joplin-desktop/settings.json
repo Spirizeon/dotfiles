@@ -1,0 +1,41 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"locale": "en_US",
+	"api.token": "f64a89607490be0fe229540e51657b3bf916a2da62e2d1b0dccd4f78c4d8a02f09fad40417d8c4a6e0da1b746ef5e167d176bf689786ab80ec30bf29e1b92988",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"spellChecker.languages": [
+		"en-US"
+	],
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 250,
+				"visible": false
+			},
+			{
+				"key": "noteList",
+				"width": 250,
+				"visible": false
+			},
+			{
+				"key": "editor",
+				"visible": true
+			}
+		],
+		"visible": true
+	},
+	"noteVisiblePanes": [
+		"editor"
+	],
+	"theme": 4,
+	"notes.sortOrder.buttonsVisible": false,
+	"editor.spellcheckBeta": true,
+	"windowContentZoomFactor": 180,
+	"editor.codeView": true,
+	"style.editor.fontFamily": "monospace",
+	"style.editor.monospaceFontFamily": "FiraCode",
+	"richTextBannerDismissed": true
+}

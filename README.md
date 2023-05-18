@@ -9,23 +9,12 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 - **Tiling WM:** [AwesomeWM](https://awesomewm.org/)
 - **DE:** [Gnome](https://www.gnome.org/)
 - **Sound control:** [pulsemixer](https://github.com/GeorgeFilipkin/pulsemixer)
-- **Editors:** [neovide](https://github.com/neovide/neovide)
+- **Editors:** neovim
 - **Terminals:** [X-term](https://invisible-island.net/xterm/), [Kitty](https://github.com/kovidgoyal/kitty)
-- **Bar:** Wibar (default)
+- **Bar:** Polybar
 - **Compositor:** [Picom](https://github.com/yshui/picom)
 - **Prompt:** [Starship](https://starship.rs/)
 
-## Installation 💮
-Run the following script in your terminal
-```bash
-sudo apt install git
-git clone https://github.com/spirizeon/zyreeawesome
-cd zyreeawesome
-chmod +x install.sh
-install.sh
-```
-Do note that the script will only install the packages/applications 
-Also, as for picom, only the dependencies will be installed. As for building, please check the [Picom's](https://github.com/yshui/picom) repo.
 ## Acknowledgements 🎴
 - https://www.makeuseof.com/
 - https://itsfoss.com/
@@ -38,5 +27,4 @@ Also, as for picom, only the dependencies will be installed. As for building, pl
 
 # Thanks! 💐
 Please ⭐ this repository if you liked it. it'd mean a lot to me.
-Do check out the `showcase.sh`script before leaving
 

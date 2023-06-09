@@ -20,8 +20,10 @@
 ;;
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
-;;
+;;custom fonts
 (setq doom-font (font-spec :family "JetBrains Mono" :size 16))
+(setq doom-variable-pitch-font (font-spec :family "JetBrains Mono" :size 20))
+(setq doom-themes-treemacs-enable-variable-pitch nil)
 ;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
@@ -74,6 +76,19 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+;;
+;; python-interpreter-path
 (setq python-shell-interpreter "C:/PROGRA~1/Python310/python.exe")
 
+;; custom-splash image
+(setq fancy-splash-image (concat doom-private-dir "splash/dashcon.png"))
 
+;; custom footer note
+(add-hook! '+doom-dashboard-functions :append
+  (insert "\n" (+doom-dashboard--center +doom-dashboard--width "SPIRIZEON")))
+(setq +doom-dashboard-menu-sections (cl-subseq +doom-dashboard-menu-sections 0 7))
+
+
+;; set transparency
+(set-frame-parameter (selected-frame) 'alpha '(85 85))
+(add-to-list 'default-frame-alist '(alpha 85 85))

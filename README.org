@@ -5,7 +5,7 @@ A beautiful linux desktop for coding/chilling, with ornamental transparency, sea
 + *Wallpapers:* [[https://github.com/spirizeon/backdrop][Click here]]
 + *Tiling WM:* [[https://awesomewm.org][AwesomeWM]]
 + *DE:* [[https://www.gnome.org/][Gnome]]
-+ *Sound control:* [[https://github.com/GeorgeFilipkin/pulsemixer][Pulsemixer]]
++ *Sound control:*[[https://github.com/GeorgeFilipkin/pulsemixer][ Pulsemixer]]
 + *Editors:* neovim, doomemacs (windows)
 + *Terminals:* [[https://github.com/kovidgoyal/kitty][Kitty]]
 + *Bar:* Polybar

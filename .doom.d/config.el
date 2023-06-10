@@ -43,6 +43,7 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+(setq org-clock-sound "~/.doom.d/bell.mp3")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -92,3 +93,8 @@
 ;; set transparency
 (set-frame-parameter (selected-frame) 'alpha '(85 85))
 (add-to-list 'default-frame-alist '(alpha 85 85))
+
+;;org-roam
+(after! org (setq org-roam-directory "~/OneDrive/Documents/roamnotes/") (setq org-roam-index-file "~/OneDrive/Documents/roamnotes/index.org"))
+
+

@@ -1,41 +1,75 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Do not change this (unless you cloned my files)
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    ./hardware-configuration.nix
+  ];
+  boot.kernelParams = [ "nvidia-drm.modeset=1" ];
 
-  # Bootloader.
+
+  hardware.graphics = {
+    enable = true;
+  };
+
+  # Load nvidia driver for Xorg and Wayland
+  services.xserver.videoDrivers = [" nvidia " " amdgpu "];
+
+  hardware.nvidia = {
+
+    # Modesetting is required.
+    modesetting.enable = true;
+
+    # Nvidia power management. Experimental, and can cause sleep/suspend to fail.
+    powerManagement.enable = true;
+    # Enable this if you have graphical corruption issues or application crashes after waking
+    # up from sleep. This fixes it by saving the entire VRAM memory to /tmp/ instead 
+    # of just the bare essentials.
+
+    # Fine-grained power management. Turns off GPU when not in use.
+    # Experimental and only works on modern Nvidia GPUs (Turing or newer).
+    powerManagement.finegrained = false;
+
+    # Use the NVidia open source kernel module (not to be confused with the
+    # independent third-party "nouveau" open source driver).
+    # Support is limited to the Turing and later architectures. Full list of 
+    # supported GPUs is at: 
+    # https://github.com/NVIDIA/open-gpu-kernel-modules#compatible-gpus 
+    # Only available from driver 515.43.04+
+    open = false;
+
+    # Enable the Nvidia settings menu,
+	# accessible via `nvidia-settings`.
+    nvidiaSettings = true;
+
+    # Optionally, you may need to select the appropriate driver version for your specific GPU.
+    package = config.boot.kernelPackages.nvidiaPackages.stable;
+
+    prime = {
+      # Use "offload.enable" for better battery or "sync.enable" for maximum performance
+      sync.enable = true;
+      # offload.enable = true;
+      # offload.enableOffloadCmd = true;
+
+      # Bus IDs calculated from your lshw output
+      nvidiaBusId = "PCI:1:0:0";
+      amdgpuBusId = "PCI:5:0:0";
+    };
+
+
+  };
+
+  # Bootloader
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-/*
-  boot.loader = {
-  efi = {
-    canTouchEfiVariables = true;
-  };
-  grub = {
-     enable = true;
-     efiSupport = true;
-     device = "/dev/sda1";
-     };
-  };
-*/
 
-  # Enable docker
-  virtualisation.docker.enable = true;
-
-  networking.hostName = "berzilinux"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-  # Enable networking
+  # Hostname & networking
+  networking.hostName = "berzilinux";
   networking.networkmanager.enable = true;
 
-  # Set your time zone.
+  # Time & locale
   time.timeZone = "Asia/Kolkata";
 
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_IN";
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_IN";
     LC_IDENTIFICATION = "en_IN";
@@ -48,135 +82,88 @@
     LC_TIME = "en_IN";
   };
 
-  # Enable the X11 windowing system.
+  # Enable GNOME
   services.xserver.enable = true;
+  services.xserver.displayManager.gdm.enable = true;
+  services.xserver.desktopManager.gnome.enable = true;
 
-  # Enable the KDE Plasma Desktop Environment.
-  services.xserver.displayManager.sddm.enable = true;
-  services.xserver.desktopManager.plasma5.enable = true;
-
-  # Configure keymap in X11
-  services.xserver = {
+  # Keyboard layout
+  services.xserver.xkb = {
     layout = "us";
-    xkbVariant = "";
+    variant = "";
   };
-  
 
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = true; # powers up the default Bluetooth controller on boot
-  
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];  #nix flakes
+  # Bluetooth
+  hardware.bluetooth.enable = true;
+  hardware.bluetooth.powerOnBoot = true;
 
-
-  # Enable CUPS to print documents.
+  # Printing
   services.printing.enable = true;
 
-  # Enable sound with pipewire.
-  sound.enable = true;
-  hardware.pulseaudio.enable = false;
+  # Audio (PipeWire)
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
   };
 
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
+  # Docker
+  virtualisation.docker.enable = true;
 
+  # Enable flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  # User config
   users.users.berzi = {
     isNormalUser = true;
     description = "ayush";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [
       firefox
-      kate
       neofetch
     ];
   };
 
-
-
+  # System packages
   environment.systemPackages = with pkgs; [
+    # Shell / UI
+    oh-my-posh
+    kitty
+    vim
+    gh
+    # Dev tools
+    git
+    gcc
+    gnumake
+    autoconf
+    automake
+    wget
+    go
+    cargo
+    rustc
+    helix
 
-  #shell stuff
-  oh-my-posh
-  libsForQt5.bismuth
-  kitty
+    # CLI tools
+    zoxide
+    htop
+    eza
+    zip
+    unzip
+    ffmpeg
+    stow
 
-  # pentesting config
-  neovim
-  burpsuite
-  ffuf
-  sqlmap
-  virtualbox
-  
-  #cli tools
-  zoxide
-  cpufetch
-  htop
-  zfxtop
-  nitch
-  eza
-  zip
-  stow
-  ffmpeg
-  unzip
-
-  #dev tools
-  go
-  git
-  gcc
-  cargo
-  rustc
-  ollama
-  libgcc
-  gnumake
-  autoconf
-  automake
-  wget
-  helix
-
-  #extras
-  flameshot
-  discord
-  spotify
+    # Extras
+    flameshot
+    discord
+    spotify
+    lshw
   ];
+
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
 
-  # List services that you want to enable:
-
-  # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-
-  system.stateVersion = "23.11"; # Did you read the comment?
-
- 
+  # System version
+  system.stateVersion = "23.11";
 }
